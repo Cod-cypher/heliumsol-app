@@ -32,7 +32,7 @@ jobs:
       - name: Upload build files
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/heliumsol-app   # ⚠️ change if different
+          path: dist/browser/heliumsol-app   # ⚠️ change if different
 
   deploy:
     needs: build
