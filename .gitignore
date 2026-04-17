@@ -22,7 +22,7 @@
 # TypeScript cache
 *.tsbuildinfo
 
-# Logs
+# Logs and hell
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
