@@ -39,7 +39,7 @@
           },
           "configurations": {
             "production": {
-              "outputMode": "browser",
+              "outputMode": "static",
               "budgets": [
                 {
                   "type": "initial",
