@@ -1,1 +1,42 @@
-/* You can add global styles to this file, and also import other style filsases */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --gold:       #f0c060;
+  --gold-light: #fff4c2;
+  --gold-dim:   rgba(240, 192, 96, 0.15);
+  --bg:         #080808;
+  --bg2:        #0e0e0e;
+  --text:       #e8dfc8;
+  --text-dim:   rgba(232, 223, 200, 0.45);
+  --border:     rgba(240, 192, 96, 0.15);
+  --mono:       'DM Mono', monospace;
+  --serif:      'Cormorant Garamond', Georgia, serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--serif);
+}
+
+/* Grain overlay — must be on body since ::after can't be on :host */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.032;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px;
+}
+
+/* Responsive overrides that touch html/body */
+@media (max-width: 900px) {
+  html, body { overflow: auto; }
+}
