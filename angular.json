@@ -39,6 +39,7 @@
           },
           "configurations": {
             "production": {
+              "outputMode": "browser",
               "budgets": [
                 {
                   "type": "initial",
